@@ -1,0 +1,14 @@
+{
+  "name": "national-phone-code",
+  "version": "1.0.0",
+  "description": "national phone code info",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "national_phone"
+  ],
+  "author": "dulianqiang",
+  "license": "ISC"
+}
