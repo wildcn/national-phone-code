@@ -1,6 +1,6 @@
 {
   "name": "national-phone-code",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "national phone code info",
   "main": "src/index.js",
   "scripts": {
