@@ -12,6 +12,12 @@ console.log(codeInfo);
 var mapData = nationalPhoneCode.getMapData();
 console.log('获取MapData');
 console.log(mapData);
+
+
 var nameMapData = nationalPhoneCode.getMapDataByNameCode();
 console.log('获取mapDataByNameCode');
 console.log(nameMapData);
+var nameCode = 'cn';
+var getCodeInfoByNameCode = nationalPhoneCode.getCodeInfoByNameCode(nameCode);
+console.log('获取指定nameCode的数据');
+console.log(nameCode,getCodeInfoByNameCode);

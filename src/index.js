@@ -30,11 +30,18 @@ var NationalCodeFunction = function (nationalCode) {
   // 根据code 获取item
   this.getCodeInfo = function (code) {
     if (!code) {
-      throw new Error('function getCodeInfo need arguments: code, link 001 or 1')
+      throw new Error('function getCodeInfo need arguments: code, like 001 or 1')
     }
     code += '';
     console.log(code);
     return this.getMapData()[code] || this.getMapDataByCompleteCode()[code] || undefined;
+  }
+  // 根据name_code获取codeInfo
+  this.getCodeInfoByNameCode = function (nameCode) {
+    if (!nameCode) {
+      throw new Error('function getCodeInfo need arguments: nameCode, like cn')
+    }
+    return this.getMapDataByNameCode()[nameCode];
   }
   // 获取codelist
   this.getCodeList = function () {

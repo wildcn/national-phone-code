@@ -26,19 +26,22 @@ import nationalPhoneCode from 'national-phone-code';
 ```
 
 
-### 获取code 列表 返回类型为string
+### getCodeList
+获取code 列表 返回类型为string
 ```
 nationalPhoneCode.getCodeList()
 ['1','86',...]
 ```
 
-### 获取补全三位的code 列表 返回类型为string
+### getCompleteCodeList
+获取补全三位的code 列表 返回类型为string
 ```
 nationalPhoneCode.getCompleteCodeList()
 ['001','086',...]
 ```
 
-### 获取原始数据
+### getData
+获取原始数据
 ```
 nationalPhoneCode.getData()
 [
@@ -54,7 +57,8 @@ nationalPhoneCode.getData()
 ]；
 ```
 
-### 获取map数据 code重复数据，将转换为array
+### getMapData
+获取map数据 code重复数据，将转换为array
 ```
 nationalPhoneCode.getMapData()
 {
@@ -78,7 +82,8 @@ nationalPhoneCode.getMapData()
 }
 ```
 
-### 获取map数据 by 三位code
+### mapDataByCompleteCode
+获取map数据 by 三位code
 ```
 nationalPhoneCode.mapDataByCompleteCode()
 {
@@ -102,7 +107,8 @@ nationalPhoneCode.mapDataByCompleteCode()
 }
 ```
 
-### 获取code详情  @params{code} | String 001 1
+### getCodeInfo
+获取code详情  @params{code} | String 001 1
 ```
 nationalPhoneCode.getCodeInfo(1);
 [{
@@ -117,7 +123,8 @@ nationalPhoneCode.getCodeInfo(1);
 ]
 ```
 
-### 获取key为name_code的序列化数据
+### getMapDataByNameCode
+获取key为name_code的序列化数据
 ```
 nationalPhoneCode.getMapDataByNameCode();
 {
@@ -131,4 +138,20 @@ nationalPhoneCode.getMapDataByNameCode();
     } 
 }
 
+```
+
+
+### getCodeInfoByNameCode
+根据name_code获取codeInfo
+```
+var nameCode = 'cn';
+nationalPhoneCode.getCodeInfoByNameCode(nameCode);
+{
+  "name": "中国",
+  "english_name": "China",
+  "name_code": "cn",
+  "phone_code": "86",
+  "traditional_chinese_name": "中国",
+  "complete_phone_code": "086"
+}
 ```
