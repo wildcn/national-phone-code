@@ -1,4 +1,4 @@
-var nationalCode = require('./data/nationalCode');
+var nationalCode = require('../data/nationalCode');
 
 var reduceData = function (key, data) {
   return data.reduce(function (per, next) {
@@ -22,11 +22,11 @@ var NationalCodeFunction = function (nationalCode) {
   // 原始数据
   this.getData = function () { return this.data };
   // map数据 
-  this.getMapData = function(){return reduceData('phone_code', this.data);}
-
+  this.getMapData = function () { return reduceData('phone_code', this.data); };
   // map数据 补全三位code为key
-  this.mapDataByCompleteCode = function(){return reduceData('complete_phone_code', this.data);}
+  this.getMapDataByCompleteCode = function () { return reduceData('complete_phone_code', this.data); }
 
+  this.getMapDataByNameCode = function () { return reduceData('name_code', this.data); }
   // 根据code 获取item
   this.getCodeInfo = function (code) {
     if (!code) {
@@ -34,7 +34,7 @@ var NationalCodeFunction = function (nationalCode) {
     }
     code += '';
     console.log(code);
-    return this.getMapData()[code] || this.mapDataByCompleteCode()[code] || undefined;
+    return this.getMapData()[code] || this.getMapDataByCompleteCode()[code] || undefined;
   }
   // 获取codelist
   this.getCodeList = function () {

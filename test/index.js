@@ -1,4 +1,4 @@
-var nationalPhoneCode = require('../index.js');
+var nationalPhoneCode = require('../src/index.js');
 
 
 var codeList = nationalPhoneCode.getCodeList();
@@ -12,3 +12,6 @@ console.log(codeInfo);
 var mapData = nationalPhoneCode.getMapData();
 console.log('获取MapData');
 console.log(mapData);
+var nameMapData = nationalPhoneCode.getMapDataByNameCode();
+console.log('获取mapDataByNameCode');
+console.log(nameMapData);
