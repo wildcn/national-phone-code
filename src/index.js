@@ -1,4 +1,4 @@
-var nationalCode = require('../data/nationalCode');
+var nationalCode = require('./data/nationalCode');
 
 var reduceData = function (key, data) {
   return data.reduce(function (per, next) {
@@ -33,7 +33,6 @@ var NationalCodeFunction = function (nationalCode) {
       throw new Error('function getCodeInfo need arguments: code, like 001 or 1')
     }
     code += '';
-    console.log(code);
     return this.getMapData()[code] || this.getMapDataByCompleteCode()[code] || undefined;
   }
   // 根据name_code获取codeInfo
